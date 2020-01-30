@@ -14,7 +14,7 @@ namespace Presentationslager
     
     public partial class FormBokning : Form
     {
-
+        
         public FormBokning()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Presentationslager
 
         private void btnListaBocker_Click(object sender, EventArgs e)
         {
-            listBoxTillangligaBocker.DataSource = 
+            listBoxTillangligaBocker.DataSource = GetBookList();
         }
     }
 }
