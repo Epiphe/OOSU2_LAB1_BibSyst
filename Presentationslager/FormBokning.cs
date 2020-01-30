@@ -11,23 +11,18 @@ using Businesslayer;
 
 namespace Presentationslager
 {
-    public partial class Form1 : Form
+    
+    public partial class FormBokning : Form
     {
-        Businessmanager BM = new Businessmanager();
 
-        public Form1()
+        public FormBokning()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnListaBocker_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnLoggaIn_Click(object sender, EventArgs e)
-        {
-
+            listBoxTillangligaBocker.DataSource = 
         }
     }
 }

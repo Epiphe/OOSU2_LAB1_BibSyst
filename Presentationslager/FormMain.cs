@@ -7,27 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Businesslayer;
 
 namespace Presentationslager
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        Businessmanager BM = new Businessmanager();
-
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLoggaIn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
