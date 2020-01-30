@@ -19,7 +19,10 @@ namespace Businesslayer
         {
             return Medlemmar;
         }
-
+        public void AddMedlem(string medlemsNr, string fNamn, string eNamn, int telNr, string epost)
+        {
+            Medlemmar.Add(new Medlem(medlemsNr, fNamn, eNamn, telNr, epost));
+        }
 
     }
 }

@@ -48,7 +48,9 @@
     <Compile Include="BokReservationsRepository.cs" />
     <Compile Include="Businessmanager.cs" />
     <Compile Include="Expedit.cs" />
+    <Compile Include="ExpreditRepository.cs" />
     <Compile Include="Faktura.cs" />
+    <Compile Include="FakturaRepository.cs" />
     <Compile Include="Medlem.cs" />
     <Compile Include="MedlemRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
