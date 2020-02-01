@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class Bok
+    public class Bok
     {
         public string BokID { get; set; }
         public string Isbn { get; set; }

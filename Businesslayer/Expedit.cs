@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class Expedit
+    public class Expedit
     {
         private string Anstallninghsnummer { get; set; }
         public string ForNamn { get; set; }

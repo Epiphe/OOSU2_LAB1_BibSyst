@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class BokRepository
+    public class BokRepository
     {
 
         private List<Bok> Bocker = new List<Bok>()

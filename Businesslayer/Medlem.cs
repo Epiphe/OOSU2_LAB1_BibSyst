@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class Medlem
+    public class Medlem
     {
         public string MedlemsNummer { get; set; }
         public string ForNamn { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class BokningarRepository
+    public class BokningarRepository
     {
         private List<Bokning> Bokningar = new List<Bokning>();
 

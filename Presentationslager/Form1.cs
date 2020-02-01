@@ -27,6 +27,9 @@ namespace Presentationslager
 
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
+            FormMain formMain = new FormMain();
+            this.Hide();
+            formMain.ShowDialog();
 
         }
     }

@@ -16,5 +16,12 @@ namespace Presentationslager
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormBokning formBokning = new FormBokning();
+            this.Hide();
+            formBokning.ShowDialog();
+        }
     }
 }

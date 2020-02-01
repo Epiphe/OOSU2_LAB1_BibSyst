@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class Bokning
+    public class Bokning
     {
         public string BokningsNummer { get; set; }
         public DateTime StartDatum { get; set; }

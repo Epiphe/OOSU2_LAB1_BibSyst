@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    class Faktura
+    public class Faktura
     {
         public Bokning Bokning { get; set; }
         public int TotalPris { get; set; }

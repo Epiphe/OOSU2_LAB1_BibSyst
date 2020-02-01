@@ -8,5 +8,15 @@ namespace Businesslayer
 {
     public class Businessmanager
     {
+        BokningarRepository BokningR = new BokningarRepository();
+        BokRepository BokR = new BokRepository();
+        public List<Bok> GetBokList()
+        {
+            return BokR.GetBokList();
+        }
+
+        ExpreditRepository Exp = new ExpreditRepository();
+        FakturaRepository Fak = new FakturaRepository();
+        MedlemRepository Med = new MedlemRepository();
     }
 }
