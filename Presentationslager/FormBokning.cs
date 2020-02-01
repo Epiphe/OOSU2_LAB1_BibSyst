@@ -81,6 +81,13 @@ namespace Presentationslager
             }
             //Skapar den nya bokningen.
             BM.AddBokning(nyttBokningsNummer,DateTime.Now,listedBoks,NuvarandeExpedit,NuvarandeMedlem);
+            //Visar bokningsnummret för expediten så Medlemmen kan få ta del av detta. 
+            MessageBox.Show("Bokningsnummer: "+nyttBokningsNummer.ToString());
+        }
+
+        private void BtnHamtaTillgangligaBocker_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

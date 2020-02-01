@@ -15,6 +15,7 @@ namespace Businesslayer
 
         public List<Bokning> GetBokningar ()
         {
+            //Här måste det läggas till kod för att vara välja bokningar som finns tillgängliga. 
             return Bokningar;
         }
 

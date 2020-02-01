@@ -40,12 +40,15 @@
             this.btnGenomforBokning = new System.Windows.Forms.Button();
             this.BtnTaBortBok = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.BtnHamtaTillgangligaBocker = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxTillangligaBocker
             // 
             this.listBoxTillangligaBocker.FormattingEnabled = true;
-            this.listBoxTillangligaBocker.Location = new System.Drawing.Point(12, 25);
+            this.listBoxTillangligaBocker.Location = new System.Drawing.Point(13, 111);
             this.listBoxTillangligaBocker.Name = "listBoxTillangligaBocker";
             this.listBoxTillangligaBocker.Size = new System.Drawing.Size(228, 277);
             this.listBoxTillangligaBocker.TabIndex = 0;
@@ -53,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Location = new System.Drawing.Point(10, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 1;
@@ -61,7 +64,7 @@
             // 
             // btnListaBocker
             // 
-            this.btnListaBocker.Location = new System.Drawing.Point(13, 309);
+            this.btnListaBocker.Location = new System.Drawing.Point(13, 404);
             this.btnListaBocker.Name = "btnListaBocker";
             this.btnListaBocker.Size = new System.Drawing.Size(98, 23);
             this.btnListaBocker.TabIndex = 2;
@@ -72,7 +75,7 @@
             // listBoxBockerBokning
             // 
             this.listBoxBockerBokning.FormattingEnabled = true;
-            this.listBoxBockerBokning.Location = new System.Drawing.Point(327, 25);
+            this.listBoxBockerBokning.Location = new System.Drawing.Point(328, 111);
             this.listBoxBockerBokning.Name = "listBoxBockerBokning";
             this.listBoxBockerBokning.Size = new System.Drawing.Size(233, 277);
             this.listBoxBockerBokning.TabIndex = 3;
@@ -80,7 +83,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(334, 9);
+            this.label2.Location = new System.Drawing.Point(325, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 4;
@@ -89,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 74);
+            this.label3.Location = new System.Drawing.Point(252, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 5;
@@ -97,7 +100,7 @@
             // 
             // bntLaggTillBok
             // 
-            this.bntLaggTillBok.Location = new System.Drawing.Point(246, 90);
+            this.bntLaggTillBok.Location = new System.Drawing.Point(247, 176);
             this.bntLaggTillBok.Name = "bntLaggTillBok";
             this.bntLaggTillBok.Size = new System.Drawing.Size(75, 46);
             this.bntLaggTillBok.TabIndex = 6;
@@ -108,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(581, 9);
+            this.label4.Location = new System.Drawing.Point(431, 409);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 7;
@@ -116,14 +119,14 @@
             // 
             // textBoxMedlemsNummer
             // 
-            this.textBoxMedlemsNummer.Location = new System.Drawing.Point(584, 26);
+            this.textBoxMedlemsNummer.Location = new System.Drawing.Point(434, 426);
             this.textBoxMedlemsNummer.Name = "textBoxMedlemsNummer";
             this.textBoxMedlemsNummer.Size = new System.Drawing.Size(128, 20);
             this.textBoxMedlemsNummer.TabIndex = 8;
             // 
             // btnGenomforBokning
             // 
-            this.btnGenomforBokning.Location = new System.Drawing.Point(584, 53);
+            this.btnGenomforBokning.Location = new System.Drawing.Point(434, 453);
             this.btnGenomforBokning.Name = "btnGenomforBokning";
             this.btnGenomforBokning.Size = new System.Drawing.Size(127, 23);
             this.btnGenomforBokning.TabIndex = 9;
@@ -133,7 +136,7 @@
             // 
             // BtnTaBortBok
             // 
-            this.BtnTaBortBok.Location = new System.Drawing.Point(246, 173);
+            this.BtnTaBortBok.Location = new System.Drawing.Point(247, 259);
             this.BtnTaBortBok.Name = "BtnTaBortBok";
             this.BtnTaBortBok.Size = new System.Drawing.Size(75, 46);
             this.BtnTaBortBok.TabIndex = 11;
@@ -144,17 +147,46 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 157);
+            this.label5.Location = new System.Drawing.Point(252, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Ta bort bok";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 30);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Välj när lånet ska börja.";
+            // 
+            // BtnHamtaTillgangligaBocker
+            // 
+            this.BtnHamtaTillgangligaBocker.Location = new System.Drawing.Point(12, 61);
+            this.BtnHamtaTillgangligaBocker.Name = "BtnHamtaTillgangligaBocker";
+            this.BtnHamtaTillgangligaBocker.Size = new System.Drawing.Size(146, 23);
+            this.BtnHamtaTillgangligaBocker.TabIndex = 14;
+            this.BtnHamtaTillgangligaBocker.Text = "Hämta tillgängliga böcker";
+            this.BtnHamtaTillgangligaBocker.UseVisualStyleBackColor = true;
+            this.BtnHamtaTillgangligaBocker.Click += new System.EventHandler(this.BtnHamtaTillgangligaBocker_Click);
+            // 
             // FormBokning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 345);
+            this.ClientSize = new System.Drawing.Size(595, 506);
+            this.Controls.Add(this.BtnHamtaTillgangligaBocker);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.BtnTaBortBok);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnGenomforBokning);
@@ -188,5 +220,8 @@
         private System.Windows.Forms.Button btnGenomforBokning;
         private System.Windows.Forms.Button BtnTaBortBok;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BtnHamtaTillgangligaBocker;
     }
 }
