@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.bntLaggTillBok = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMedlemsNummer = new System.Windows.Forms.TextBox();
             this.btnGenomforBokning = new System.Windows.Forms.Button();
             this.BtnTaBortBok = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -114,12 +114,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Medlemsnummer:";
             // 
-            // textBox1
+            // textBoxMedlemsNummer
             // 
-            this.textBox1.Location = new System.Drawing.Point(584, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBoxMedlemsNummer.Location = new System.Drawing.Point(584, 26);
+            this.textBoxMedlemsNummer.Name = "textBoxMedlemsNummer";
+            this.textBoxMedlemsNummer.Size = new System.Drawing.Size(128, 20);
+            this.textBoxMedlemsNummer.TabIndex = 8;
             // 
             // btnGenomforBokning
             // 
@@ -129,6 +129,7 @@
             this.btnGenomforBokning.TabIndex = 9;
             this.btnGenomforBokning.Text = "Genomför bokning";
             this.btnGenomforBokning.UseVisualStyleBackColor = true;
+            this.btnGenomforBokning.Click += new System.EventHandler(this.btnGenomforBokning_Click);
             // 
             // BtnTaBortBok
             // 
@@ -157,7 +158,7 @@
             this.Controls.Add(this.BtnTaBortBok);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnGenomforBokning);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxMedlemsNummer);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bntLaggTillBok);
             this.Controls.Add(this.label3);
@@ -183,7 +184,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bntLaggTillBok;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMedlemsNummer;
         private System.Windows.Forms.Button btnGenomforBokning;
         private System.Windows.Forms.Button BtnTaBortBok;
         private System.Windows.Forms.Label label5;

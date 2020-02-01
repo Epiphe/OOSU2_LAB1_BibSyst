@@ -8,16 +8,19 @@ namespace Businesslayer
 {
     public class BokningarRepository
     {
-        private List<Bokning> Bokningar = new List<Bokning>();
+        private List<Bokning> Bokningar = new List<Bokning>()
+        {
+            new Bokning("B0",DateTime.Now,null,null,null)
+        };
 
         public List<Bokning> GetBokningar ()
         {
             return Bokningar;
         }
 
-        public void AddBokning(string boknr, DateTime startdatum)
+        public void AddBokning(string bokningsNummer, DateTime startDatum, List<Bok> bocker, Expedit expedit, Medlem medlem)
         {
-            Bokningar.Add(new Bokning(boknr, startdatum));
+            Bokningar.Add(new Bokning(bokningsNummer, startDatum, bocker, expedit, medlem));
         }
 
     }

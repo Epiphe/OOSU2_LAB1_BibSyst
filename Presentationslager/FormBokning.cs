@@ -46,5 +46,41 @@ namespace Presentationslager
             listBoxTillangligaBocker.Items.Add(listBoxBockerBokning.SelectedItem);
             listBoxBockerBokning.Items.Remove(listBoxBockerBokning.SelectedItem);
         }
+
+        private void btnGenomforBokning_Click(object sender, EventArgs e)
+        {
+            //Skapa nytt bokningsnummer genom att räkna antalet bokningar och lägga till ett B framför. Funkar eftersom index börjar på 0.
+            List<Bokning> tempBokning = BM.GetBokningar().ToList();
+            string nyttBokningsNummer = "B"+tempBokning.Count().ToString();
+
+            List<string> listedStrings = new List<string>();
+            List<Bok> listedBoks = new List<Bok>();
+            //Eftersom det bara finns en expedit i det nuvarande systemet är Nuvarande expedit satt titll denna.
+            Expedit NuvarandeExpedit = BM.GetExpediter()[0];
+            //Flyttar över innehållet i BokadeBöcker till listedBoks.
+            foreach (string str in listBoxBockerBokning.Items)
+            {
+                listedStrings.Add(str);
+                foreach(Bok B in BM.GetBokList())
+                {
+                    if (B.Titel == str)
+                    {
+                        listedBoks.Add(B);
+                    }
+                }
+            }
+
+            //Hämtar medlemmar och väljer ut den som har samma medlemsnummer som anges i inmatningsfältet.
+            Medlem NuvarandeMedlem = null;
+            foreach (Medlem M in BM.GetMedlemmar())
+            {
+                if (M.MedlemsNummer == textBoxMedlemsNummer.Text)
+                {
+                    NuvarandeMedlem = M;
+                }
+            }
+            //Skapar den nya bokningen.
+            BM.AddBokning(nyttBokningsNummer,DateTime.Now,listedBoks,NuvarandeExpedit,NuvarandeMedlem);
+        }
     }
 }

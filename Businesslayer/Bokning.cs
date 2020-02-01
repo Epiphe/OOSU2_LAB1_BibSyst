@@ -8,7 +8,7 @@ namespace Businesslayer
 {
     public class Bokning
     {
-        public string BokningsNummer { get; set; }
+        public string BokningsNummer { get; }
         public DateTime StartDatum { get; set; }
         public DateTime SlutDatum { get; set; }
         public DateTime AterlamningsDatum { get; set; }
@@ -17,11 +17,14 @@ namespace Businesslayer
         public Medlem Medlem { get; set; }
         public Faktura Faktura { get; set; }
 
-        public Bokning(string bokningsNummer, DateTime startDatum)
+        public Bokning(string bokningsNummer, DateTime startDatum, List<Bok> bocker, Expedit expedit, Medlem medlem)
         {
             this.BokningsNummer = bokningsNummer;
             this.StartDatum = startDatum;
             this.SlutDatum = startDatum.AddDays(28.0);
+            this.Bocker = bocker;
+            this.Expedit = expedit;
+            this.Medlem = medlem;
         }
     }
 }
