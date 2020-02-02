@@ -40,7 +40,7 @@
             this.btnGenomforBokning = new System.Windows.Forms.Button();
             this.BtnTaBortBok = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBokning = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnHamtaTillgangligaBocker = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -153,12 +153,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Ta bort bok";
             // 
-            // dateTimePicker1
+            // dateTimePickerBokning
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePickerBokning.Location = new System.Drawing.Point(13, 30);
+            this.dateTimePickerBokning.Name = "dateTimePickerBokning";
+            this.dateTimePickerBokning.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerBokning.TabIndex = 12;
             // 
             // label6
             // 
@@ -186,7 +186,7 @@
             this.ClientSize = new System.Drawing.Size(595, 506);
             this.Controls.Add(this.BtnHamtaTillgangligaBocker);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerBokning);
             this.Controls.Add(this.BtnTaBortBok);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnGenomforBokning);
@@ -220,7 +220,7 @@
         private System.Windows.Forms.Button btnGenomforBokning;
         private System.Windows.Forms.Button BtnTaBortBok;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBokning;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnHamtaTillgangligaBocker;
     }

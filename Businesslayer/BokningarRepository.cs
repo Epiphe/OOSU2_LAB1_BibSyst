@@ -13,7 +13,7 @@ namespace Businesslayer
             new Bokning("B0",DateTime.Now,null,null,null)
         };
 
-        public List<Bokning> GetBokningar ()
+        public List<Bokning> GetBokningar (DateTime startDatum)
         {
             //Här måste det läggas till kod för att vara välja bokningar som finns tillgängliga. 
             return Bokningar;

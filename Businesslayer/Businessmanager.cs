@@ -9,9 +9,9 @@ namespace Businesslayer
     public class Businessmanager
     {
         BokningarRepository BokningR = new BokningarRepository();
-        public List<Bokning> GetBokningar()
+        public List<Bokning> GetBokningar(DateTime startDatum)
         {
-            return BokningR.GetBokningar();
+            return BokningR.GetBokningar(startDatum);
         }
         public void AddBokning(string bokningsNummer, DateTime startDatum, List<Bok> bocker, Expedit expedit, Medlem medlem)
         {          
