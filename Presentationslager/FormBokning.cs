@@ -46,9 +46,8 @@ namespace Presentationslager
 
         private void btnGenomforBokning_Click(object sender, EventArgs e)
         {
-            //Skapa nytt bokningsnummer genom att räkna antalet bokningar och lägga till ett B framför. Funkar eftersom index börjar på 0.
-            List<Bokning> tempBokning = BM.GetBokningar(dateTimePickerBokning.Value).ToList();
-            string nyttBokningsNummer = "B"+tempBokning.Count().ToString();
+            //Skapa nytt bokningsnummer genom att räkna totala antalet bokningar och lägga till ett B framför. Funkar eftersom index börjar på 0.
+            string nyttBokningsNummer = "B" + BM.GetTotalAntalBokningar().ToList().Count().ToString();
 
             List<string> listedStrings = new List<string>();
             List<Bok> listedBoks = new List<Bok>();
@@ -77,17 +76,21 @@ namespace Presentationslager
                 }
             }
             //Skapar den nya bokningen.
-            BM.AddBokning(nyttBokningsNummer,DateTime.Now,listedBoks,NuvarandeExpedit,NuvarandeMedlem);
+            BM.AddBokning(nyttBokningsNummer, dateTimePickerBokning.Value, listedBoks,NuvarandeExpedit,NuvarandeMedlem);
             //Visar bokningsnummret för expediten så Medlemmen kan få ta del av detta. 
             MessageBox.Show("Medlemsnummer: "+NuvarandeMedlem.MedlemsNummer+"\nNamn: "+NuvarandeMedlem.ForNamn+" "+NuvarandeMedlem.EfterNamn+"\nBokningsnummer: "+nyttBokningsNummer.ToString());
+            FormMain.ActiveForm
+            Close();
         }
 
         private void BtnHamtaTillgangligaBocker_Click(object sender, EventArgs e)
         {
-            foreach (Bok B in BM.GetBokList())
+            foreach (Bok B in BM.GetTillGangligaBocker(dateTimePickerBokning.Value))
             {
                 listBoxTillangligaBocker.Items.Add(B.Titel);
             }
         }
+
+        
     }
 }

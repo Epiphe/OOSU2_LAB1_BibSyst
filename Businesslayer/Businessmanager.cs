@@ -9,13 +9,18 @@ namespace Businesslayer
     public class Businessmanager
     {
         BokningarRepository BokningR = new BokningarRepository();
-        public List<Bokning> GetBokningar(DateTime startDatum)
+        //Varför finns denna här? Jo för Bokningarna är ju information expert om vilka böcker som är bokade.
+        public List<Bok> GetTillGangligaBocker(DateTime startDatum)
         {
-            return BokningR.GetBokningar(startDatum);
+            return BokningR.GetTillGangligaBocker(startDatum);
         }
         public void AddBokning(string bokningsNummer, DateTime startDatum, List<Bok> bocker, Expedit expedit, Medlem medlem)
         {          
             BokningR.AddBokning(bokningsNummer, startDatum, bocker, expedit, medlem);
+        }
+        public List<Bokning> GetTotalAntalBokningar()
+        {
+            return BokningR.GetTotalAntalBokningar();
         }
 
         BokRepository BokR = new BokRepository();
