@@ -25,11 +25,6 @@ namespace Presentationslager
         {
             listBoxBockerBokning.Items.Clear();
             listBoxTillangligaBocker.Items.Clear();
-            foreach (Bok B in BM.GetBokList())
-            {
-                listBoxTillangligaBocker.Items.Add(B.Titel);
-            }
-
         }
 
         private void bntLaggTillBok_Click(object sender, EventArgs e)
@@ -79,8 +74,8 @@ namespace Presentationslager
             BM.AddBokning(nyttBokningsNummer, dateTimePickerBokning.Value, listedBoks,NuvarandeExpedit,NuvarandeMedlem);
             //Visar bokningsnummret för expediten så Medlemmen kan få ta del av detta. 
             MessageBox.Show("Medlemsnummer: "+NuvarandeMedlem.MedlemsNummer+"\nNamn: "+NuvarandeMedlem.ForNamn+" "+NuvarandeMedlem.EfterNamn+"\nBokningsnummer: "+nyttBokningsNummer.ToString());
-            FormMain.ActiveForm
-            Close();
+            //FormMain.ActiveForm
+            //Close();
         }
 
         private void BtnHamtaTillgangligaBocker_Click(object sender, EventArgs e)

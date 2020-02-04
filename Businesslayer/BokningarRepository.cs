@@ -19,32 +19,49 @@ namespace Businesslayer
         {
             //Filtrerar fram de bokningar startar undertiden som denna bokning är planerad.
             var result = from bokn in Bokningar
-                         where startDatum > bokn.StartDatum && startDatum < bokn.SlutDatum 
+                         where startDatum > bokn.StartDatum && startDatum < bokn.SlutDatum || startDatum.AddDays(28) < bokn.StartDatum && startDatum.AddDays(28) > bokn.SlutDatum
                          select bokn.Bocker;
+            
             //Skapar en temp boklista att lägga uppbokade böcker i.
             List<Bok> uppbokadeBocker = new List<Bok>();
-            //Plockar ur de böcker som är uppbokade
+            //Plockar ur de böcker som är uppbokade 
             foreach (List<Bok> B in result)
             {
                 if (B is null)
                 {
-                    break;
+                    continue;
                 }
                 foreach (Bok bok in B)
                 {
                     uppbokadeBocker.Add(bok);
                 }
             }
-            List<Bok> tillGangligaBocker = new List<Bok>(); 
-            //Lägger alla böcker i listan tillgängliga böcker.
-            tillGangligaBocker = BokR.GetBokList();
-            //Plockar bort alla böcker som är uppbokade från listan tillgängliga böcker. 
-            foreach (Bok B in uppbokadeBocker)
+            List<Bok> tillGangligaBocker = new List<Bok>();
+            List<Bok> allaBocker = new List<Bok>();    
+            //Lägger alla böcker i listan allaBocker.
+            allaBocker = BokR.GetBokList();
+            //Går igenom listan alla böcker och kollar mot listan med uppbokade böcker. Om boken INTE är uppbokad läggs den i lsiatn med tillgängliga böcker.
+            foreach (Bok B in allaBocker)
             {
-                tillGangligaBocker.Remove(B);
+                foreach (Bok C in uppbokadeBocker)
+                {
+                    if (B.BokID != C.BokID )
+                    {
+                        tillGangligaBocker.Add(B);
+                    }
+                }
             }
-            //Skickar tillbaka listan med tillgängliga böcker.
-            return tillGangligaBocker;
+
+            //Om listan med uppbokade böcker är tom läggs det inget i tillgängliga böcker i den och då skickas listan med alla böcker istället.
+            if (tillGangligaBocker.Count == 0)
+            {
+                return allaBocker;
+            }
+            else
+            {
+                return tillGangligaBocker;
+            }
+
         }
         public List<Bokning> GetTotalAntalBokningar()
         { 

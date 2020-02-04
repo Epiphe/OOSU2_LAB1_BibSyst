@@ -12,7 +12,7 @@ namespace Businesslayer
         public string Isbn { get; set; }
         public string Titel { get; set; }
         public bool Utlanad { get; set; }
-        public List<Bokning> Bokningar { get; set; }
+        public List<Bokning> Bokningar = new List<Bokning>();
 
         public Bok(string bokId, string isbn, string titel)
         {
